@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startSignUpFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.petsbook.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_startSignUpFragment"
+            app:destination="@id/startSignUpFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/startSignUpFragment"
+        android:name="com.example.petsbook.signUp.StartSignUpFragment"
+        android:label="fragment_start_registration"
+        tools:layout="@layout/fragment_start_sign_up" >
+        <action
+            android:id="@+id/action_startSignUpFragment_to_choosePetFragment"
+            app:destination="@id/choosePetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/choosePetFragment"
+        android:name="com.example.petsbook.signUp.ChoosePetFragment"
+        android:label="fragment_choose_pet"
+        tools:layout="@layout/fragment_choose_pet" >
+        <action
+            android:id="@+id/action_choosePetFragment_to_chooseBreedFragment"
+            app:destination="@id/chooseBreedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseBreedFragment"
+        android:name="com.example.petsbook.signUp.ChooseBreedFragment"
+        android:label="fragment_choose_breed"
+        tools:layout="@layout/fragment_choose_breed" >
+        <action
+            android:id="@+id/action_chooseBreedFragment_to_chooseGenderFragment"
+            app:destination="@id/chooseGenderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseGenderFragment"
+        android:name="com.example.petsbook.signUp.ChooseGenderFragment"
+        android:label="fragment_choose_gender"
+        tools:layout="@layout/fragment_choose_gender" >
+        <action
+            android:id="@+id/action_chooseGenderFragment_to_chooseDOBFragment"
+            app:destination="@id/chooseDOBFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseDOBFragment"
+        android:name="com.example.petsbook.signUp.ChooseDOBFragment"
+        android:label="fragment_choose_dob"
+        tools:layout="@layout/fragment_choose_dob" >
+        <action
+            android:id="@+id/action_chooseDOBFragment_to_indicatePetsNameFragment"
+            app:destination="@id/indicatePetsNameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/indicatePetsNameFragment"
+        android:name="com.example.petsbook.signUp.IndicatePetsNameFragment"
+        android:label="fragment_indicate_pets_name"
+        tools:layout="@layout/fragment_indicate_pets_name" >
+        <action
+            android:id="@+id/action_indicatePetsNameFragment_to_finishSignUpFragment"
+            app:destination="@id/finishSignUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishSignUpFragment"
+        android:name="com.example.petsbook.signUp.FinishSignUpFragment"
+        android:label="fragment_finish_sign_up"
+        tools:layout="@layout/fragment_finish_sign_up" >
+        <action
+            android:id="@+id/action_finishSignUpFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.petsbook.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.petsbook.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    creating menu-->
+    <item android:id="@+id/add_pet" android:title="Добавить питомца"></item>
+
+</menu>
